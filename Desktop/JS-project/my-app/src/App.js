@@ -1,5 +1,6 @@
-import './App.css';
-import MyPage from './my-site';
+import './style/App.css';
+import MyPage from './components/my-site';
+
 
 function App() {
   return (

@@ -1,16 +1,24 @@
 import React from 'react';
-import './HomePage.css';
+import '../style/HomePage.css';
 
-function MyPage() {
+
+function MyPage ()
+{
+
   return (
     <div className="homepage">
       <header className="header">
         <h1>Ласкаво просимо до мого React додатку!</h1>
       </header>
 
-      <section className="main-content"></section>
+      <section className="main-content">
+      </section>
+
+      
+        
     </div>
-  );
+  )
 }
-//test
+
+
 export default MyPage;
