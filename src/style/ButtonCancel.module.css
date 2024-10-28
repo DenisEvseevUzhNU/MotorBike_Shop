@@ -1,0 +1,12 @@
+.cancel{
+    background-color: #e31e1e;
+    color: white;
+    border: none;
+    height: 40px;
+    width: 98%;
+}
+
+.cancel:hover {
+
+    background-color: #f6675d;
+}

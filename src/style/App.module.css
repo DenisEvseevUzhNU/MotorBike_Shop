@@ -11,7 +11,7 @@
 }
 
 .loginform{
-  margin-top: 17%;
+  margin-top: 16%;
   height: 300px;
   width: 400px;
   display: flex;
@@ -77,11 +77,15 @@ width: 100%;
   
 }
 .buttonform{
+  display: flex;
+  justify-content: center;
   width: 45%;
   margin-top: 24px;
 }
 
 .buttonform2{
+  display: flex;
+  justify-content: center;
   width: 55%;
   margin-top: 20px;
 }
