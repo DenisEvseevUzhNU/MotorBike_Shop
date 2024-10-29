@@ -1,0 +1,108 @@
+.container {}
+
+.header {
+    display: flex;
+    justify-content: space-between; /* Space between header items */
+    align-items: center; /* Center vertically */
+    background-color: #171A1FFF; /* Grey background for header */
+    padding: 10px;
+    margin-bottom: 20px;
+}
+
+.title {
+    flex-grow: 1; /* Allow the title to take available space */
+    text-align: center; /* Center text */
+}
+
+.header h1 {
+    color: white; /* Change text color to white */
+    margin: 0; /* Remove default margin */
+}
+
+.backButton {
+    background-color: #808080; /* Grey color for the button */
+    color: white; /* Text color white */
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    border-radius: 5px; /* Rounded corners */
+}
+
+.content {
+    background-color: #e1e1e1; /* Grey background for content */
+    padding: 20px;
+    border-radius: 5px; /* Rounded corners */
+    width: 70%; /* Width set to 70% */
+    margin: 0 auto; /* Center container */
+}
+
+.grid {
+    display: flex;
+    flex-direction: column; /* Vertical layout */
+    gap: 20px; /* Gap between items */
+}
+
+.bikeContainer {
+    background-color: white; /* Background for each motorcycle */
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Light shadow */
+    position: relative; /* Position for fixing */
+}
+
+.bikeContent {
+    display: flex; /* Flexbox for horizontal alignment */
+    align-items: center; /* Center vertically */
+}
+
+.imagePlaceholder {
+    max-width: 100%; /* Allow image to scale down */
+    max-height: 250px; /* Set maximum height */
+    object-fit: contain; /* Maintain aspect ratio */
+    margin-right: 35px; /* Right margin for spacing */
+    flex-shrink: 0; /* Prevent shrinking */
+}
+
+.details {
+    display: flex;
+    flex-direction: column;
+}
+
+.countInput {
+    margin-top: 10px;
+}
+
+.commentInput {
+    width: 100%;
+    height: 80px; /* Fixed height for comment field */
+    margin-top: 10px;
+    resize: none; /* Disable resizing */
+}
+
+.buttonContainer {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+
+.buyButton {
+    background-color: green;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    border-radius: 7px;
+    height: 35px;
+    width: 110px;
+}
+
+.cancelButton {
+    background-color: red;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    border-radius: 7px;
+    height: 35px;
+    width: 110px;
+}

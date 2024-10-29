@@ -6,6 +6,7 @@ import Login from "./Login";
 import Client from "./Client";
 import Admin from "./Admin";
 import ClientOrder from "./ClientOrder";
+import ClientProfile from "./ClientProfile";
 
 const Main = () => {
     return (
@@ -16,6 +17,7 @@ const Main = () => {
         <Route path={"/client"} element={<Client/>}/>
         <Route path={"/admin"} element ={<Admin/>}/>
         <Route path={"/clientorder"} element = {<ClientOrder/>}/>
+        <Route path={"/clientprofile"} element = {<ClientProfile/>}/>
       </Routes>
     </Router>
     )

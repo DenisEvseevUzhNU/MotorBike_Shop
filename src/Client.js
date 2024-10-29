@@ -35,12 +35,20 @@ const Client = () => {
         navigate("/");
     };
 
+    const goToAccount = () => {
+        navigate("/clientprofile");
+    }
+
+    const goToOrder = () => {
+        navigate("/clientorder");
+    }
+
     return (
         <div className={styles.container}>
             <header className={styles.header}>
-                <button className={styles.accountButton}>Account</button>
+                <button className={styles.accountButton} onClick={goToAccount}>Account</button>
                 <h1 className={styles.title} onClick={goToSignUp}>MotorBike Shop</h1>
-                <ShoppingCartButton img={shoppingCart} isActive={true}/>
+                <ShoppingCartButton img={shoppingCart} isActive={true} link={"/clientorder"}/>
             </header>
             <div className={styles.gridCont}>
                 <div className={styles.grid}>

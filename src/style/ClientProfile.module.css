@@ -1,0 +1,114 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    padding-top: 150px;
+}
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #171A1FFF;
+    color: white;
+    padding: 15px 20px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    box-sizing: border-box;
+    z-index: 1000;
+}
+
+.header span {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.backButton {
+    background-color: #9095A0FF;
+    color: white;
+    border: none;
+    height: 30px;
+    width: 100px;
+    padding: 5px 10px;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.profileContent {
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.imageContainer {
+    position: relative;
+    width: 450px;
+    height: 450px;
+    margin-right: 20px;
+}
+
+.profileImage {
+    width: 100%;
+    height: 100%;
+}
+
+.imageInput {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 24px;
+    height: 24px;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.fieldsContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.field {
+    display: flex;
+    flex-direction: column;
+}
+
+.passwordContainer {
+    display: flex;
+    align-items: center;
+}
+
+.passwordInput, .phoneNumberInput {
+    padding: 5px;
+    width: 200px;
+    margin-right: 10px;
+}
+
+.visibilityButton {
+    background-color: transparent;
+    border: none;
+    color: black;
+    cursor: pointer;
+}
+
+.changePasswordButton, .changePhoneButton {
+    background-color: #636AE8FF;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    padding: 8px 10px;
+    cursor: pointer;
+    width: fit-content;
+}
+
+@media (max-width: 600px) {
+    .passwordInput, .phoneNumberInput {
+        width: 100%;
+    }
+}
