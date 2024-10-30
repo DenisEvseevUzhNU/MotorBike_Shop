@@ -1,0 +1,35 @@
+.button {
+    height: 40px;
+    width: 40px;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 30px;
+}
+.button:hover {
+    background-color: rgb(121, 121, 121);
+    box-shadow: 0px 0px 5px rgb(108, 108, 108);
+    transition: background-color 500ms ease-in-out;
+}
+
+.button_2{
+    height: 30px;
+    width: 30px;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 30px;
+}
+
+.button_2:hover{
+    background: rgba(0, 0, 0, 0.219);
+    transition: background 500ms ease-in-out;
+}

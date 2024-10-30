@@ -1,0 +1,11 @@
+.accept {
+    background-color: #45a049;
+    color: white;
+    border: none;
+    height: 40px;
+    width: 98%;
+}
+
+.accept:hover {
+    background-color: #a9e6ab;
+}
