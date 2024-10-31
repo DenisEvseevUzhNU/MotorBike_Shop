@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import styles from "./style/ClientProfile.module.css";
 import userImage from "./assets/user-gray.png";
+import ButtonBack from "./components/ButtonBack";
 
 const ClientProfile = () => {
     const [oldPasswordVisible, setOldPasswordVisible] = useState(false);
@@ -22,7 +23,7 @@ const ClientProfile = () => {
         <div className={styles.container}>
             <div className={styles.header}>
                 <span>Profile</span>
-                <button className={styles.backButton}>Back</button>
+                <ButtonBack text="Back" to="/client"/>
             </div>
             <div className={styles.profileContent}>
                 <div className={styles.imageContainer}>
