@@ -2,65 +2,65 @@
 
 .header {
     display: flex;
-    justify-content: space-between; /* Space between header items */
-    align-items: center; /* Center vertically */
-    background-color: #171A1FFF; /* Grey background for header */
+    justify-content: space-between;
+    align-items: center;
+    background-color: #171A1FFF;
     padding: 10px;
     margin-bottom: 20px;
 }
 
 .title {
-    flex-grow: 1; /* Allow the title to take available space */
-    text-align: center; /* Center text */
+    flex-grow: 1;
+    text-align: center;
 }
 
 .header h1 {
-    color: white; /* Change text color to white */
-    margin: 0; /* Remove default margin */
+    color: white;
+    margin: 0;
 }
 
 .backButton {
-    background-color: #808080; /* Grey color for the button */
-    color: white; /* Text color white */
+    background-color: #808080;
+    color: white;
     border: none;
     padding: 10px 15px;
     cursor: pointer;
-    border-radius: 5px; /* Rounded corners */
+    border-radius: 5px;
 }
 
 .content {
-    background-color: #e1e1e1; /* Grey background for content */
+    background-color: #e1e1e1;
     padding: 20px;
-    border-radius: 5px; /* Rounded corners */
-    width: 70%; /* Width set to 70% */
-    margin: 0 auto; /* Center container */
+    border-radius: 5px;
+    width: 70%;
+    margin: 0 auto;
 }
 
 .grid {
     display: flex;
-    flex-direction: column; /* Vertical layout */
-    gap: 20px; /* Gap between items */
+    flex-direction: column;
+    gap: 20px;
 }
 
 .bikeContainer {
-    background-color: white; /* Background for each motorcycle */
+    background-color: white;
     padding: 15px;
     border-radius: 5px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Light shadow */
-    position: relative; /* Position for fixing */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    position: relative;
 }
 
 .bikeContent {
-    display: flex; /* Flexbox for horizontal alignment */
-    align-items: center; /* Center vertically */
+    display: flex;
+    align-items: center;
 }
 
 .imagePlaceholder {
-    max-width: 100%; /* Allow image to scale down */
-    max-height: 250px; /* Set maximum height */
-    object-fit: contain; /* Maintain aspect ratio */
-    margin-right: 35px; /* Right margin for spacing */
-    flex-shrink: 0; /* Prevent shrinking */
+    max-width: 100%;
+    max-height: 250px;
+    object-fit: contain;
+    margin-right: 35px;
+    flex-shrink: 0;
 }
 
 .details {
@@ -74,9 +74,9 @@
 
 .commentInput {
     width: 100%;
-    height: 80px; /* Fixed height for comment field */
+    height: 80px;
     margin-top: 10px;
-    resize: none; /* Disable resizing */
+    resize: none;
 }
 
 .buttonContainer {
