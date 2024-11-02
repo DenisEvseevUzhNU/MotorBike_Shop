@@ -12,6 +12,7 @@ const motorcycles = [
         power: "205 hp",
         torque: "144 Nm",
         weight: "168 kg",
+        price: "30000$",
         image: Bike_1,
     },
     {
@@ -19,6 +20,7 @@ const motorcycles = [
         power: "207 hp",
         torque: "113 Nm",
         weight: "197 kg",
+        price: "25000$",
         image: Bike_2,
     },
     {
@@ -26,6 +28,7 @@ const motorcycles = [
         power: "142 hp",
         torque: "111 Nm",
         weight: "238 kg",
+        price: "18000$",
         image: Bike_3,
     },
 ];
@@ -50,6 +53,7 @@ const ClientOrder = function () {
                                     <p>Power: <span>{bike.power}</span></p>
                                     <p>Torque: <span>{bike.torque}</span></p>
                                     <p>Weight: <span>{bike.weight}</span></p>
+                                    <p>Price: <span>{bike.price}</span></p>
                                     <input type="number" placeholder="Count" className={styles.countInput} />
                                 </div>
                             </div>

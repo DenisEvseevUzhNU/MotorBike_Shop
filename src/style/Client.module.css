@@ -11,7 +11,7 @@
     padding: 10px 20px;
 }
 
-.accountButton{
+.accountButton {
     background: none;
     border: none;
     color: white;
@@ -19,7 +19,7 @@
     cursor: pointer;
 }
 
-.accountButton:hover{
+.accountButton:hover {
     color: #ccc;
 }
 
@@ -30,7 +30,7 @@
     margin: 0;
 }
 
-.gridCont{
+.gridCont {
     display: flex;
     justify-content: center;
     width: 100%;
@@ -53,23 +53,30 @@
     width: 80%;
 }
 
-.productCartFooter{
+.productCartFooter {
     margin-left: 20px;
     margin-right: 10px;
     display: flex;
     justify-content: space-between;
+    align-items: center;
+}
+
+.productName {
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.productPrice {
+    font-weight: bold;
+    color: #333;
+    margin-left: 10px;
+    font-size: 16px;
 }
 
 .productImage {
     width: 100%;
     height: 300px;
-    object-fit: cover;
-}
-
-.productName {
-    margin: 10px 0;
-    font-weight: bold;
-    font-size: 16px;
+    object-fit: contain;
 }
 
 .addToCartButton {
