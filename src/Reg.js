@@ -18,7 +18,7 @@ const Reg = () => {
     const handleRegister = async () => {
       let result = await registerUser(email, phone_number, password, confirm_password);
       if (result){
-        navigate('/login');
+        navigate('/');
         alert ("Акаунт зареєстровано!");
       }
       else {

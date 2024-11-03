@@ -1,5 +1,6 @@
+import React, {useEffect, useState} from 'react';
 import { auth } from './firebase';
-import { signInWithEmailAndPassword } from 'firebase/auth';
+import { signInWithEmailAndPassword, signOut } from 'firebase/auth';
 
 export const loginUser = async (login, password) => {
   try {
@@ -12,4 +13,26 @@ export const loginUser = async (login, password) => {
     console.error("Помилка входу:", error.message);
     return false;
   }
+};
+
+export const logoutUser = async () => {
+  try {
+    await signOut(auth);
+    console.log("Користувач вийшов з акаунту");
+  } catch (error) {
+    console.error("Помилка при виході з акаунту:", error.message);
+  }
+};
+
+export const useAuth = () => {
+  const [user, setUser] = useState(null);
+
+  useEffect(() => {
+    const unsubscribe = auth.onAuthStateChanged((firebaseUser) => {
+      setUser(firebaseUser);
+    });
+    return () => unsubscribe();
+  }, []);
+
+  return { user };
 };
