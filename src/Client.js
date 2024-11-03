@@ -3,7 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import styles from "./style/Client.module.css";
 import ShoppingCartButton from "./components/ShopingCartButton";
 import shoppingCart from "./assets/shopping_cart.png";
-import shoppingCart_2 from "./assets/Bikes/shoppingCart_2.png";
+import shoppingCart_2 from "./assets/shoppingCart_2.png";
 import { db } from "./firebase";
 import { collection, getDocs, doc, setDoc, getDoc } from "firebase/firestore";
 import { useAuth } from "./AuthDataBase";
@@ -47,13 +47,19 @@ const Client = () => {
       const cartSnapshot = await getDoc(cartRef);
 
       let cartData = cartSnapshot.exists() ? cartSnapshot.data().items || [] : [];
-      const productWithId = { ...product, id: product.id };
 
-      cartData.push(productWithId);
+      const existingProductIndex = cartData.findIndex(item => item.id === product.id);
+
+      if (existingProductIndex >= 0) {
+        alert("Товар вже додано до кошика!");
+      } else {
+        const productWithQuantity = { ...product, id: product.id};
+        cartData.push(productWithQuantity);
+        alert("Товар додано у кошик !");
+      }
+    
 
       await setDoc(cartRef, { items: cartData });
-
-      alert("Товар додано у кошик !");
 
     } catch (error) {
       console.error("Ошибка добавления в корзину: ", error);

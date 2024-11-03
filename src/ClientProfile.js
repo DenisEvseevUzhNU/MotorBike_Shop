@@ -2,8 +2,13 @@ import React, { useState } from "react";
 import styles from "./style/ClientProfile.module.css";
 import userImage from "./assets/user-gray.png";
 import ButtonBack from "./components/ButtonBack";
+import { updatePassword, reauthenticateWithCredential, EmailAuthProvider  } from "firebase/auth";
+import { useAuth } from "./AuthDataBase";
+import { db } from "./firebase";
+import { doc, updateDoc } from "firebase/firestore";
 
 const ClientProfile = () => {
+    const {user} = useAuth();
     const [oldPasswordVisible, setOldPasswordVisible] = useState(false);
     const [newPasswordVisible, setNewPasswordVisible] = useState(false);
     const [oldPassword, setOldPassword] = useState("");
@@ -17,6 +22,33 @@ const ClientProfile = () => {
     const handleImageUpload = (e) => {
         const file = e.target.files[0];
         if (file) setProfileImage(URL.createObjectURL(file));
+    };
+
+    const handlePasswordChange = async () => {
+        const credential = EmailAuthProvider.credential(user.email, oldPassword);
+    
+        try {
+            await reauthenticateWithCredential(user, credential);
+        
+            await updatePassword(user, newPassword);
+            alert("Password changed successfully");
+        } catch (error) {
+            alert("An error occurred when changing the password.")
+        }
+    };
+
+    const updateUserInDatabase = async (uid, userData) => {
+        const userRef = doc(db, "users", uid);
+        await updateDoc(userRef, userData);
+    };
+
+    const handlePhoneNumberChange = async () => {
+        try{
+            await updateUserInDatabase(user.uid, { phone_number: phoneNumber});
+            alert("Phone number changed successfully");
+        } catch {
+            alert("An error occurred when changing the phone number.")
+        }
     };
 
     return (
@@ -65,7 +97,7 @@ const ClientProfile = () => {
                             </button>
                         </div>
                     </div>
-                    <button className={styles.changePasswordButton}>
+                    <button className={styles.changePasswordButton} onClick={handlePasswordChange}>
                         Change Password
                     </button>
                     <div className={styles.field}>
@@ -77,7 +109,7 @@ const ClientProfile = () => {
                             onChange={(e) => setPhoneNumber(e.target.value)}
                         />
                     </div>
-                    <button className={styles.changePhoneButton}>
+                    <button className={styles.changePhoneButton} onClick={handlePhoneNumberChange}>
                         Change Phone Number
                     </button>
                 </div>
