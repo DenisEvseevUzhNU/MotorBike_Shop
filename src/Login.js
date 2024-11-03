@@ -4,14 +4,24 @@ import LinkButton from "./components/LinkButton";
 import InputField from "./components/InputField";
 import styles from "./style/App.module.css";
 import { loginUser } from './AuthDataBase';
+import RegButton from "./components/RegButton";
+import { useNavigate } from 'react-router-dom';
 
 const Login = function () {
 
-    const [login, setLogin] = useState('');
+    const navigate = useNavigate();
+
+    const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
 
-    const handleLogin = () => {
-        loginUser(login, password);
+    const handleLogin = async() => {
+        let result = await loginUser(email, password);
+        if (result){
+            navigate('/Client')
+        }
+        else{
+            alert("Введіть Дані !");
+        }
     };
 
     return (
@@ -21,13 +31,13 @@ const Login = function () {
                     <h1 className={styles.text}>Login</h1>
                 </div>
 
-                <InputField label="Login" type="text" placeholder="login" className={styles.Input} value={login} setState={setLogin}/>
+                <InputField label="Email" type="text" placeholder="email" className={styles.Input} value={email} setState={setEmail}/>
                 <InputField label="Password" type="password" placeholder="password" className={styles.Input} value={password} setState={setPassword}/>
 
                 <div className={styles.buttonform2}>
-                    <Button functions={handleLogin} isNavigation={false}>
+                    <RegButton functions={handleLogin}>
                         login
-                    </Button>
+                    </RegButton>
                 </div>
 
                 <div>

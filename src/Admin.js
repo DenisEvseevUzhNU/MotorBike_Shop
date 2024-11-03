@@ -5,7 +5,7 @@ import LinkButton from "./components/LinkButton";
 import ButtonAccept from "./components/ButtonAccept";
 import ButtonCancel from "./components/ButtonCancel";
 import ButtonBack from "./components/ButtonBack";
-import styles from "./style/Admin.module.css"; // Import styles as a module
+import styles from "./style/Admin.module.css";
 
 const Admin = function () {
     const orders = [

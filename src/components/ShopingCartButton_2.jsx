@@ -10,13 +10,8 @@ const ShoppingCartButton = function (props){
         navigate(props.link);
     }
 
-    const handleButton = () => {
-        goToOrder();
-        props.onAddToCart();
-    }
-
     return (
-        <button className={props.isActive ? styles.button : styles.button_2} onClick={handleButton}>
+        <button className={props.isActive ? styles.button : styles.button_2} onClick={goToOrder}>
             <img src={props.img} alt="Close" width="20" height="20"/>
         </button>
     );
